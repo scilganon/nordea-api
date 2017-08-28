@@ -52,12 +52,10 @@ class GetUserInfoRequest implements RequestInterface
      */
     public function setRequestHeader(RequestHeader $rh)
     {
-        Helper::copyAttributes($rh, $this->config, [
-            'sender_id',
-            'language',
-            'user_agent',
-            'receiver_id'
-        ]);
+        $rh->setSenderId($this->config->sender_id);
+        $rh->setLanguage($this->config->language);
+        $rh->setUserAgent($this->config->user_agent);
+        $rh->setReceiverId($this->config->receiver_id);
 
         $rh->setTimestamp($this->timestamp);
         $rh->setRequestId(Helper::hexRandom());
@@ -78,11 +76,10 @@ class GetUserInfoRequest implements RequestInterface
      */
     public function setApplicationRequest(ApplicationRequest $ap)
     {
-        Helper::copyAttributes($ap, $this->config, [
-            'customer_id',
-            'environment',
-            'software_id'
-        ]);
+        $ap->customer_id = $this->config->customer_id;
+        $ap->environment = $this->config->environment;
+        $ap->software_id = $this->config->software_id;
+        $ap->customer_id = $this->config->customer_id;
 
         $ap->command = 'GetUserInfo';
         $ap->timestamp = $this->timestamp;
