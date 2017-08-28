@@ -47,7 +47,7 @@ class SignedApplicationRequest
 
         $signer->sign($objKey);
 
-        $signer->add509Cert(file_get_contents($this->options->cert_file));
+        $signer->add509Cert(file_get_contents($this->options->cert_file), true, false, ['issuerSerial' => true]);
 
         $signer->appendSignature($doc->documentElement);
 
