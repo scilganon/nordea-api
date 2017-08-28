@@ -2,6 +2,7 @@
 
 use Phpro\SoapClient\ClientBuilder;
 use Phpro\SoapClient\ClientFactory;
+use Profit\Nordea\API\Middleware\WsseMiddleware;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 require_once __DIR__ . '/bootstrap.php';
@@ -41,8 +42,8 @@ foreach($types as $type){
 
 $clientBuilder->withHandler(\Phpro\SoapClient\Soap\Handler\GuzzleHandle::createWithDefaultClient());
 
-$key_file = __DIR__ . '/../cert/WSNDEA1234.pem';
-$wsse = new \Phpro\SoapClient\Middleware\WsseMiddleware($key_file, $key_file);
+$key_file = realpath(__DIR__ . '/../cert/WSNDEA1234.pem');
+$wsse = new WsseMiddleware($key_file, $key_file);
 //$wsse->withAllHeadersSigned()->withEncryption($key_file);
 $wsse->withTimestamp(0);
 $clientBuilder->addMiddleware($wsse);
