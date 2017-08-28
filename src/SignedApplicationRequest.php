@@ -56,10 +56,14 @@ class SignedApplicationRequest
 
     public function __toString()
     {
-        return $this->toDocument()
+        $result = $this->toDocument()
             ->getElementsByTagName('ApplicationRequest')
             ->item(0)
             ->C14N();
+
+        file_put_contents(realpath(__DIR__ . '/../steps/application_request.signed.php.xml'), $result);
+
+        return $result;
     }
 
 }

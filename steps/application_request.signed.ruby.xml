@@ -1,8 +1,7 @@
-"
 <ApplicationRequest xmlns="http://bxd.fi/xmldata/">
     <CustomerId>162355330</CustomerId>
     <Command>GetUserInfo</Command>
-    <Timestamp>2017-08-28T11:10:29+03:00</Timestamp>
+    <Timestamp>2017-08-28T17:08:59+03:00</Timestamp>
     <Environment>PRODUCTION</Environment>
     <SoftwareId>Ruby</SoftwareId>
     <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
@@ -14,11 +13,11 @@
                     <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
                 </Transforms>
                 <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
-                <DigestValue>rURr4Nv4PilkBF8lAslYOrPL5ig=</DigestValue>
+                <DigestValue>ASkw7DM8WajTQD1UBzEI0EwWOU4=</DigestValue>
             </Reference>
         </SignedInfo>
         <SignatureValue>
-            VoPv/PQMD51mfOxBsxjBizPJMTSpGTJB32HxadOhsk8lMKthhVSHqNwyaYGCh8EaZCarUKLA65+SOdNcpscL7TAWPF2iO2aP6zlca4voDYLkYI+xQr/yT5QbdhNOiyX9iiCKGrxucuaPBo6h5vfXOeda5k6kQ8+f0eoMZIXaz0Y=
+            fluH95RY33n3rOC6pklGXDiyWCOXXf1uPXbmKB3ys/FTX6Dsgq6Tk2QfqYTSY9/PaScqhsxG66z4/xJaSDBWFB7xlT9HIip2SWr/u2A2BnCgrz9b2eXj3dGnPOwdOLGw7kVEE64OivgjjmgRrRMl/kW52fUb7kGYM6E+t8Z7Ldc=
         </SignatureValue>
         <KeyInfo>
             <X509Data>
@@ -32,4 +31,4 @@
             </X509Data>
         </KeyInfo>
     </Signature>
-</ApplicationRequest>"
+</ApplicationRequest>

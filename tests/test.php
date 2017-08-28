@@ -42,7 +42,6 @@ foreach($types as $type){
 
 $clientBuilder->withHandler(\Phpro\SoapClient\Soap\Handler\GuzzleHandle::createWithDefaultClient());
 
-$key_file = realpath(__DIR__ . '/../cert/WSNDEA1234.pem');
 $wsse = new WsseMiddleware($key_file, $key_file);
 //$wsse->withAllHeadersSigned()->withEncryption($key_file);
 $wsse->withTimestamp(0);
