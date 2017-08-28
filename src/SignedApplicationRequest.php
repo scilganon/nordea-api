@@ -56,12 +56,10 @@ class SignedApplicationRequest
 
     public function __toString()
     {
-        $text = $this->toDocument()
+        return $this->toDocument()
             ->getElementsByTagName('ApplicationRequest')
             ->item(0)
             ->C14N();
-
-        return base64_encode(str_replace(array("\r", "\n"), '', $text));
     }
 
 }

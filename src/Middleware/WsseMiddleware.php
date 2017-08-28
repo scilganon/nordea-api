@@ -6,9 +6,9 @@ namespace Profit\Nordea\API\Middleware;
 
 use Phpro\SoapClient\Xml\SoapXml;
 use Psr\Http\Message\RequestInterface;
+use RobRichards\WsePhp\WSSESoap;
 use RobRichards\XMLSecLibs\XMLSecurityKey;
 use Psr\Http\Message\ResponseInterface;
-use RobRichards\WsePhp\WSSESoap;
 
 class WsseMiddleware extends \Phpro\SoapClient\Middleware\WsseMiddleware
 {
@@ -197,6 +197,21 @@ class WsseMiddleware extends \Phpro\SoapClient\Middleware\WsseMiddleware
         }
 
         $request = $request->withBody($xml->toStream());
+
+        $xml->getXmlDocument()->save(realpath(__DIR__ . '/../../steps/application_request.formed.php.xml'));
+
+        return $handler($request, $options);
+    }
+
+    public function abeforeRequest(callable $handler, RequestInterface $request, array $options)
+    {
+        $dom = new \DOMDocument();
+        $dom->loadXML(file_get_contents(realpath(__DIR__ . '/../../steps/application_reqeust.formed.ruby.xml')));
+
+        $xml = new SoapXml($dom);
+
+        $request = $request->withBody($xml->toStream());
+
 
         return $handler($request, $options);
     }
