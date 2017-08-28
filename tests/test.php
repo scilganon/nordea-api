@@ -44,6 +44,7 @@ $clientBuilder->withHandler(\Phpro\SoapClient\Soap\Handler\GuzzleHandle::createW
 $key_file = __DIR__ . '/../cert/WSNDEA1234.pem';
 $wsse = new \Phpro\SoapClient\Middleware\WsseMiddleware($key_file, $key_file);
 //$wsse->withAllHeadersSigned()->withEncryption($key_file);
+$wsse->withTimestamp(0);
 $clientBuilder->addMiddleware($wsse);
 
 /** @var \Profit\Nordea\API\NordeaSoapClient $client */
