@@ -21,4 +21,9 @@ class NordeaSoapClient extends Client
     {
         return $this->call('GetUserInfo', $request);
     }
+
+    public function downloadFile(RequestInterface $request)
+    {
+        return $this->call('downloadFile', $request);
+    }
 }
