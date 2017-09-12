@@ -6,10 +6,16 @@ namespace Profit\Nordea\API;
 
 use Phpro\SoapClient\Client;
 use Phpro\SoapClient\Type\RequestInterface;
+use Profit\Nordea\API\SoapTypes\DownloadFileListRequest;
+use Profit\Nordea\API\SoapTypes\DownloadFileListResponse;
+use Profit\Nordea\API\SoapTypes\DownloadFileRequest;
+use Profit\Nordea\API\SoapTypes\GetUserInfoRequest;
+use Profit\Nordea\API\SoapTypes\UploadFileRequest;
+use Profit\Nordea\API\SoapTypes\UploadFileResponse;
 use SoapClient;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
-class NordeaSoapClient extends Client
+class ClientSOAP extends Client implements ClientInterface
 {
     public function __construct(SoapClient $soapClient, EventDispatcherInterface $dispatcher)
     {
@@ -17,12 +23,12 @@ class NordeaSoapClient extends Client
     }
 
 
-    public function getUserInfo(RequestInterface $request)
+    public function getUserInfo(GetUserInfoRequest $request)
     {
         return $this->call('GetUserInfo', $request);
     }
 
-    public function downloadFile(RequestInterface $request)
+    public function downloadFile(DownloadFileRequest $request)
     {
         return $this->call('downloadFile', $request);
     }
@@ -39,4 +45,13 @@ class NordeaSoapClient extends Client
     }
 
 
+    public function downloadFileList(DownloadFileListRequest $request): DownloadFileListResponse
+    {
+        // TODO: Implement downloadFileList() method.
+    }
+
+    public function uploadFile(UploadFileRequest $request): UploadFileResponse
+    {
+        // TODO: Implement uploadFile() method.
+    }
 }

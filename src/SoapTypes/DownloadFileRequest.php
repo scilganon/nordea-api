@@ -9,6 +9,12 @@ use Profit\Nordea\API\Config;
 use Profit\Nordea\API\Helper;
 use Profit\Nordea\API\SignedApplicationRequest;
 
+/**
+ * @todo: remove hardcoded values
+ *
+ * Class DownloadFileRequest
+ * @package Profit\Nordea\API\SoapTypes
+ */
 class DownloadFileRequest implements RequestInterface
 {
 
