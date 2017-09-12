@@ -89,8 +89,21 @@ class ClientRPCProxy implements ClientInterface
         return $this->toResponse(UploadFileResponse::class, $rawResponse);
     }
 
-    protected function toResponse($targetClass, array $rawResponse)
+    /**
+     * @param string $targetClass
+     * @param array|string $rawResponse
+     * @return ResultInterface
+     * @throws \Exception
+     */
+    protected function toResponse(string $targetClass, $rawResponse)
     {
+        if(is_string($rawResponse)){
+            $code = [];
+            preg_match('/.*\(#(\d+)\).*/', $rawResponse, $code);
+
+            throw new \Exception($rawResponse, $code[1]);
+        }
+
         /** @var ResultInterface $response */
         $response = new $targetClass();
         $response->setResponseHeader($rawResponse['response_header']);

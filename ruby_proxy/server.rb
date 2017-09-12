@@ -44,21 +44,25 @@ class Server
 
     client = Nordea::FileTransfer::Client.new
 
-    response = client.public_send(method) do |header, request|
-      iheader.each { |key, value|
-        header.send("#{key.snakecase}=", value)
-      }
+    begin
+      response = client.public_send(method) do |header, request|
+        iheader.each { |key, value|
+          header.send("#{key.snakecase}=", value)
+        }
 
-      irequest.each { |key, value|
-        request.send("#{key.snakecase}=", value)
-      }
+        irequest.each { |key, value|
+          request.send("#{key.snakecase}=", value)
+        }
 
-      puts 'ok'
+        puts 'ok'
+      end
+
+      puts response.application_response
+
+      response
+    rescue Nordea::FileTransfer::Error => e
+      e
     end
-
-    puts response.application_response
-
-    response
   end
 end
 
