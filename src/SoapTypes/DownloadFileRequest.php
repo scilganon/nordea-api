@@ -34,16 +34,19 @@ class DownloadFileRequest implements RequestInterface
     private $type = 'TITO';
     private $status = 'ALL';
     private $references = [];
+    private $target_id;
 
     /**
      * DownloadFileRequest constructor.
      * @param Config $config
+     * @param string $target_id
      * @param array $references
      */
-    public function __construct(Config $config, array $references)
+    public function __construct(Config $config, string $target_id, array $references)
     {
         $this->config = $config;
         $this->timestamp = new \DateTime();
+        $this->target_id = $target_id;
 
         $this->setReferences($references);
 
@@ -89,7 +92,7 @@ class DownloadFileRequest implements RequestInterface
      */
     public function setApplicationRequest(ApplicationRequest $ar)
     {
-        $ar->command = 'downloadFile';
+        $ar->command = 'DownloadFile';
 
         $ar->customer_id = $this->config->customer_id;
         $ar->environment = $this->config->environment;
@@ -99,7 +102,7 @@ class DownloadFileRequest implements RequestInterface
         $ar->file_type = $this->type;
         $ar->status = $this->status;
         $ar->file_references = $this->references;
-        $ar->target_id = '11111111A1';
+        $ar->target_id = $this->target_id;
 
         $this->ApplicationRequest=  new SignedApplicationRequest($ar, $this->config);
         $this->rawApplicationRequest = $ar;
