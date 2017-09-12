@@ -14,7 +14,8 @@
         "phpro/soap-client": "^0.5.2",
         "guzzlehttp/guzzle": "^6.2",
         "http-interop/http-factory-guzzle": "^0.1.0",
-        "fguillot/json-rpc": "@stable"
+        "fguillot/json-rpc": "@stable",
+        "funct/funct": "^1.4"
     },
     "autoload": {
         "psr-4": {
