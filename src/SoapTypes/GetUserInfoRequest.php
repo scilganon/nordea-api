@@ -35,6 +35,8 @@ class GetUserInfoRequest implements RequestInterface
         $this->config = $config;
         $this->timestamp = new \DateTime();
 
+        $this->timestamp->setTimezone(new \DateTimeZone('Europe/Kiev'));
+
         $this->setRequestHeader(new RequestHeader());
         $this->setApplicationRequest(new ApplicationRequest());
     }

@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+ruby '2.4.1'
+
+# Added at 2017-08-23 17:19:22 +0300 by maxim:
+gem "nordea-filetransfer", "~> 0.2.1"
+
+
+# Added at 2017-08-23 19:50:27 +0300 by maxim:
+gem "activesupport", "~> 5.1"
+# Added at 2017-08-29 15:51:35 +0300 by maxim:
+gem "rjr", "~> 0.19.3"
+
+# Added at 2017-09-11 23:51:21 +0300 by maxim:
+gem "jimson", "~> 0.9.1"

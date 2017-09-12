@@ -13,7 +13,8 @@
         "sabre/dav": "^3.2",
         "phpro/soap-client": "^0.5.2",
         "guzzlehttp/guzzle": "^6.2",
-        "http-interop/http-factory-guzzle": "^0.1.0"
+        "http-interop/http-factory-guzzle": "^0.1.0",
+        "fguillot/json-rpc": "@stable"
     },
     "autoload": {
         "psr-4": {

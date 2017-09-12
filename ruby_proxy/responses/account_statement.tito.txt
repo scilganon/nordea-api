@@ -1,0 +1,130 @@
+T00322100195030000000100430603030603030603032359    44444444     060302+000000000003083849000130EURShekkitili                    000000000000000000POHJANLINNAN RAUTATALO             Nordea Pankki Suomi Oyj Y-tunn 1680235-81950 Demokonttori                                                     FI4819503000000010 NDEAFIHH
+T10188000001060303258877C240020603030603060603031710Pano                               +000000000000220560EARUUVI JA MUTTERI                   J
+T10188000001                  0603030000000603032710Hyvityslasku                       -000000000000320560 ARUUVI JA MUTTERI                   J                                           1
+T1104300HYVITYSLASKU 2425
+T10188000001                  0603030000000603031710Lasku                              +000000000000320000 ARUUVI JA MUTTERI                   J               00000000800056124147        1
+T10188000001                  0603030000000603031710Lasku                              +000000000000221120 ARUUVI JA MUTTERI                   J               00000000800056124150        1
+T10188000002060303258877A263240603030603060603031710Pano                               +000000000000369500 ALUMILINNA KY                       J
+T110410212578           25123      060214
+T10188000003060303258877A223570603030603060603031710Pano                               +000000000000222930 APELTOLA PEKKA OY                   J
+T1104300LASKUT 3278/3251/4836
+T1104309PEKAN KORJAAMO
+T101880000040603032584SM0200480603030603020603031780Zero Balancing                     +000000000001036487 JABC-KONSERNI                       A
+T1107800CMZ/0036540000                     /5400
+T101880000050603032588WWNG03700603030603060603031710Pano                               +000000000000025675 APELTOLA LIISA                      J
+T1104300LASKU 3265/HYVITYSLASKU 777
+T101880000060603032584SM0101170603030603030603031710Nordea maksu                       +000000000000113091 JUS IRON AND STEEL                  A
+T11288002584SMM0849971                     /RFB/WT0000626289                  000049302611118                    MAKSAJAN ILMOITTAMA SAAJAN NIMI:   NORTH CASTLE'S IRONHOUSE           TORPANKATU 1111                    PL 999                             99999 POHJANLINNA FINLAND
+T1104905+000000000000135200 USD 00011955000
+T1111307L[HETT[J[N OSOITE:                 1239 EAST CIRCLESTREET             PO BOX55/5 8877
+T10188000007060303258873A200090603030603060603031704Suoraveloituspalvelu               +000000000000212068EJ
+T110160100000004
+T10188000008060303258874A353190603030603060603031703Maksup{{tepalvelu                  +000000000000521900 APOHJANLINNAN RAUTATALO             J
+T110160100000111
+T1107800OSTOT    111 KPL            5219,00OIK.       0 KPL               0,00
+T1104306TILITYSER[ 0120070
+T101880000090603032584LV1436230603030603030603032720Tilisiirto                         -000000000000008110 AABC-KONSERNI                       J19503000001414                     FI143623
+T110430000000324510099418709
+T1104306001311     REC:5
+T1107807MAKSAJAN ILMOITTAMA SAAJAN NIMI:   C/O ABCDEF GROUP OY
+T10188000010060303258883E454730603030603030603032730Palvelumaksu                       -000000000000066567EJNORDEA PANKKI SUOMI OYJ            J
+T110430001.02.-28.02.2006
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000000500 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1121800E-lasku er{siirtoon                Palvelutunnus FI4819503000000010   E-laskujen l{hetys/kk 0-49               1 kpl a'   5,000 e       5,00Veron peruste e          4,10      alv rek. 22% vero e      0,90
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000000500 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1121800E-lasku er{siirrosta               Palvelutunnus FI4819503000000010   E-laskujen vastaanotto/kk 0-49           1 kpl a'   5,000 e       5,00Veron peruste e          4,10      alv rek. 22% vero e      0,90
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000015674 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1125300Saapuvat viitemaksut               195030-10                          Viitetapahtuma                   *)   1194 kpl a'   0,126 e     150,44Aineiston k{sittelymaksu         *)     21 kpl a'   0,300 e       6,30*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000002100 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1118300Konekielinen tiliote               195030-10                          Tiliote                          *)     42 kpl a'   0,500 e      21,00*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000003248 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1132300Palkat ja el{kkeet                 Palvelutunnus 9999999              Tapahtumat                       *)    106 kpl a'   0,126 e      13,36Tapahtumat toisiin pankkeihin    *)    147 kpl a'   0,126 e      18,52Aineiston k{sittelymaksu         *)      2 kpl a'   0,300 e       0,60*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000004856 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1139300Laskujen maksupalvelu              Palvelutunnus 8888880              Viestillinen maksu               *)     90 kpl a'   0,135 e      12,15Viitteellinen maksu              *)    370 kpl a'   0,034 e      12,58Maksut muihin pankkeihin         *)    142 kpl a'   0,135 e      19,17Viitemaksut muihin pankkeihin    *)    137 kpl a'   0,034 e       4,66*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000001030 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1125300Maksup{{tepalvelu                  Palvelutunnus 19999999002          Tapahtumat                       *)    370 kpl a'   0,010 e       3,70Aineiston k{sittelymaksu         *)     22 kpl a'   0,300 e       6,60*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000009210 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1135800Yrityksen verkkopankki             Liittym{maksu per yritys         *)      5 kpl a'   5,000 e      25,00Ulkomaiset tiliyhteydet          *)      4 kpl a'  10,000 e      40,00K{ytt{j{maksu                    *)      5 kpl a'   3,000 e      15,00Tilikysely                       *)    121 kpl a'   0,100 e      12,10*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000000078 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1132300Suoraveloitus                      Palvelutunnus 9999999              Suoraveloitus                    *)      2 kpl a'   0,034 e       0,07Suoraveloitus muihin pankkeihin  *)     12 kpl a'   0,034 e       0,41Aineiston k{sittelymaksu         *)      1 kpl a'   0,300 e       0,30*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000000600 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1128800Solo-sopimus/yritys                K{ytt{j{maksu                    *)      1 kpl a'   3,000 e       3,00Perussalkku                              1 kpl a'   3,000 e       3,00Veron peruste e          2,46      alv rek. 22% vero e      0,54      *) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000011271 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1139300Konekieliset valuuttamaksut        Palvelutunnus 1234564              Maksum{{r{ys                     *)     12 kpl a'   4,200 e      50,40Lis{palkkio                      *)      6 kpl a'  10,000 e      60,00EU-maksu                         *)      6 kpl a'   0,135 e       0,81Aineiston k{sittelymaksu         *)      5 kpl a'   0,300 e       1,50*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000005620 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1125300Konekieliset valuuttamaksut        Palvelutunnus S12345678            Nordea Payment, t{yten{          *)      1 kpl a'  24,200 e      24,20Nordea Intercompany Payment      *)      4 kpl a'   8,000 e      32,00*) alv rek. 0%
+T10188000010                  0603030000000603032730Palvelumaksu                       -000000000000011880 JNORDEA PANKKI SUOMI OYJ            J                                           1
+T1135800Balance Reporting, ulkom. tiliote  Tiliote Nordean yksik|st{        *)      1 kpl a'  34,000 e      34,00Tiliote ulkomaisesta pankista    *)      2 kpl a'  34,000 e      68,00Saldot ulkomaisesta pankista     *)      1 kpl a'   8,400 e       8,40Tapahtumat ulkomaisesta pankista *)      1 kpl a'   8,400 e       8,40*) alv rek. 0%
+T101880000110603031950AA0100630603030603030603032722Shekki                             -000000000000100000 KPOHJANLINNAN OSUUSKAUPPA           J                                   00000101
+T10188000012060303258872A200930603030603030603032701Toistuvaissuorituspalv             -000000000003222008 A
+T110160100000019
+T1104306009999999 1234567890
+T1104308010 Palkka
+T1104309RAUTAKESKUS
+T10188000013060303258872B501370603030603030603032701Toistuvaissuorituspalv             -000000000000510000 A
+T110160100000003
+T1104306009999999 0987654321
+T1104308030 Korvaus
+T1104309HENKIL\ST\OSASTO
+T101880000140603032584LV1262620603030603030603032720EU-maksu                           -000000000000153000 AMULTICOLOURS LTD                   A                                     186412
+T1118300BLACKBURN                          BBJ 9PS GB                         GB29NWBK60161331926819             NWBKGB2LCTY                        58DI 325841
+T11078060000000038648555
+T1107807MAKSAJAN LIS[TIEDOT:               IRONHOUSE PMT CNTR
+T1104309RHYL AVENUE 55555
+T101880000150603032584LV1482030603030603030603032720Maksum{{r{ys                       -000000000000184000 AEISEN&STAHL                        A                                     194356
+T1118300ALPENDORF                          9999 CH                            CH9300762011623852957              ZKBKCHZZ80A                        9876
+T11078060000000038648556
+T1107807MAKSAJAN LIS[TIEDOT:               POHJANLINNA'S IRON CNTR
+T1104309EISENSTRASSE 1232
+T10188000016060303258877A301620603030603030603032702Laskujen maksupalvelu              -000000000001662263EA
+T110160100000010
+T1104306ER[ 1 03.03.06
+T1104309RAUTAKESKUS
+T10188000016                  0603030000000603032702Maksu                              -000000000000005046 APOHJANLINNAN TILAUSAUTOT OY        J19503000001422                             1
+T10188000016                  0603030000000603032702Lasku                              -000000000000010092 APOHJANLINNAN TILAUSAUTOT OY        J19503000001422                             2
+T1104300TILAUSAUTOSOPIMUS 200
+T110780600987654                           3210
+T10188000016                  0603030000000603031702Hyvityslasku                       +000000000000005046 APOHJANLINNAN TILAUSAUTOT OY        J19503000001422                             2
+T1104300CN 35888
+T110780600987655                           3211
+T10188000016                  0603030000000603032702Maksu                              -000000000000241388 APAALITUS TMI                       A55555520010124                             1
+T11041021234567890 123/06          060217
+T110780600987656                           3212
+T10188000016                  0603030000000603032702Maksu                              -000000000001114395 AMAKAROFFIN MASIINAKAUPPA           J19503000003220*00000000000012345672        1
+T110780600987657                           3213
+T10188000016                  0603030000000603032702Maksu                              -000000000000201826 APOHJANL.RUOKATALO OY               J19503000051427*00000000000001234561        1
+T110780600987658                           3214
+T10188000016                  0603030000000603032702Maksu                              -000000000000025252 ASELJANNE TILITOIMISTO              J19503000051435                             1
+T10188000016                  0603030000000603032702Lasku                              -000000000000029457 ASELJANNE TILITOIMISTO              J19503000051435                             2
+T1104300LASKU 258 06.02.06
+T110780600987659                           123701
+T10188000016                  0603030000000603031702Hyvityslasku                       +000000000000004205 ASELJANNE TILITOIMISTO              J19503000051435                             2
+T1104300HYVITYSLASKU  16/17.02.06
+T110780600987660                           123702
+T10188000016                  0603030000000603032702Maksu                              -000000000000025228 AAAPON AUTOLIIKE                    A44121040002604 00000002955278687968        1
+T110780600987661                           123703
+T10188000016                  0603030000000603032702Maksu                              -000000000000042047 AYRITYS OY AB                       J19503000000069*                            1
+T11041021234567890 123456789012345 060223
+T110780600987662                           123704
+T10188000016                  0603030000000603032702Maksu                              -000000000000007081 ATAAVETIN TARINATALLI               J19503000000397                             1
+T1104300KIELIKURSSIT 1/06 LASKUNRO 15
+T110780600987663                           123705
+T10188000017060303258877A301630603030603030603032702Laskujen maksupalvelu              -000000000000070068EA
+T110160100000005
+T1104306ER[ 2 03.03.06
+T10188000017                  0603030000000603032702Maksu                              -000000000000019611 APOHJANLINNAN HUOLTO OY             J19503000085474                             1
+T10188000017                  0603030000000603032702Lasku                              -000000000000033638 APOHJANLINNAN HUOLTO OY             J19503000085474 00000000000000520085        2
+T10188000017                  0603030000000603031702Hyvityslasku                       +000000000000014027 APOHJANLINNAN HUOLTO OY             J19503000085474 00000000000000520098        2
+T10188000017                  0603030000000603032702Maksu                              -000000000000004205 APIIRAN VUOKRATALOT                 J19503000000754 00000000000000520108        1
+T10188000017                  0603030000000603032702Maksu                              -000000000000004205 APIIRAN VUOKRATALOT                 J19503000000754 00000000000000520111        1
+T10188000017                  0603030000000603032702Maksu                              -000000000000042047 APIIRAN LIIKEKESKUS                 J19503000000853 00000000000000520124        1
+T10188000018060303258873K500850603030603030603032704Suoraveloitus                      -000000000000037338 APOHJANLINNAN PUHELIN               J29501800068417
+T110430600000000000142673816
+T10188000019                  0603030603030000001705Viitepanot                         +000000000000032324E
+T110160100000001
+T10188000020                  0603030603060000001705Viitepanot                         +000000000000615897E
+T110160100000006
+T40050060303+000000000000440927+000000000000000000
+T50067106030300000010+00000000000337043200000010-000000000006013354
+T50067306030300000000+00000000000545629000000000-000000000009521456
+T50067406030300000000+00000000002553001800000000-000000000019872756
