@@ -8,35 +8,32 @@ class RequestHeader
     /**
      * @var string
      */
-    private $SenderId = null;
+    public $SenderId = null;
 
     /**
      * @var string
      */
-    private $RequestId = null;
+    public $RequestId = null;
 
     /**
      * @var \DateTime
      */
-    private $Timestamp = null;
+    public $Timestamp = null;
 
     /**
      * @var string
      */
-    private $Language = null;
+    public $Language = null;
 
     /**
      * @var string
      */
-    private $UserAgent = null;
+    public $UserAgent = null;
 
     /**
      * @var string
      */
-    private $ReceiverId = null;
-
-    /** @var string  */
-    private $Environment = null;
+    public $ReceiverId = null;
 
     /**
      * @return string
@@ -134,22 +131,9 @@ class RequestHeader
         $this->ReceiverId = $ReceiverId;
     }
 
-    /**
-     * @return string
-     */
-    public function getEnvironment(): string
+    public function toArray()
     {
-        return $this->Environment;
+        return get_class_vars($this);
     }
-
-    /**
-     * @param string $Environment
-     */
-    public function setEnvironment(string $Environment)
-    {
-        $this->Environment = $Environment;
-    }
-
-
 }
 

@@ -15,19 +15,19 @@ class Server
   extend Jimson::Handler
 
   def get_user_info(request)
-    run 'get_user_info', request['iConfig'], request['iHeader'], request['iRequest']
+      run 'get_user_info', request['config'], request['header'], request['request']
   end
 
   def download_file(request)
-    run 'download_file', request['iConfig'], request['iHeader'], request['iRequest']
+    run 'download_file', request['config'], request['header'], request['request']
   end
 
   def download_file_list(request)
-    run 'download_file_list', request['iConfig'], request['iHeader'], request['iRequest']
+    run 'download_file_list', request['config'], request['header'], request['request']
   end
 
   def upload_file(request)
-    run 'upload_file', request['iConfig'], request['iHeader'], request['iRequest']
+    run 'upload_file', request['config'], request['header'], request['request']
   end
 
   def run(method, iconfig, iheader, irequest)
@@ -35,7 +35,7 @@ class Server
 
     Nordea::FileTransfer.configure do |config|
       iconfig.each { |key, value|
-        config.send("#{key}=", value)
+        config.send("#{key.snakecase}=", value)
       }
 
       config.cert_file = key_path
@@ -46,15 +46,17 @@ class Server
 
     response = client.public_send(method) do |header, request|
       iheader.each { |key, value|
-        header.send("#{key}=", value)
+        header.send("#{key.snakecase}=", value)
       }
 
       irequest.each { |key, value|
-        request.send("#{key}=", value)
+        request.send("#{key.snakecase}=", value)
       }
+
+      puts 'ok'
     end
 
-    puts response
+    puts response.application_response
 
     response
   end

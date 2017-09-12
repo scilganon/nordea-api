@@ -5,10 +5,10 @@ use Phpro\SoapClient\ClientFactory;
 use Profit\Nordea\API\Middleware\WsseMiddleware;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
-require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/../bootstrap.php';
 
 $wsdl = __DIR__ . '/../wsdl/BankCorporateFileService_20080616.xml';
-$clientFactory = new ClientFactory(\Profit\Nordea\API\ClientSOAP::class);
+$clientFactory = new ClientFactory(\Profit\Nordea\API\Services\ClientSOAP::class);
 $soapOptions = [
     'cache_wsdl' => WSDL_CACHE_NONE
 ];
@@ -47,7 +47,7 @@ $wsse = new WsseMiddleware($key_file, $key_file);
 $wsse->withTimestamp(0);
 $clientBuilder->addMiddleware($wsse);
 
-/** @var \Profit\Nordea\API\ClientSOAP $client */
+/** @var \Profit\Nordea\API\Services\ClientSOAP $client */
 $client = $clientBuilder->build();
 
 $client->changeSoapLocation('https://filetransfer.nordea.com/services/CorporateFileService');

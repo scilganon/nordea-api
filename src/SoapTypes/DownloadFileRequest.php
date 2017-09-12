@@ -18,8 +18,6 @@ use Profit\Nordea\API\SignedApplicationRequest;
 class DownloadFileRequest implements RequestInterface
 {
 
-
-
     /**
      * @var RequestHeader
      */
@@ -31,22 +29,26 @@ class DownloadFileRequest implements RequestInterface
     private $ApplicationRequest = null;
     private $config;
     private $timestamp;
+    private $rawApplicationRequest;
+
+    private $type = 'TITO';
+    private $status = 'ALL';
+    private $references = [];
 
     /**
      * DownloadFileRequest constructor.
-     * @param RequestHeader $RequestHeader
+     * @param Config $config
+     * @param array $references
      */
-    public function __construct(Config $config)
+    public function __construct(Config $config, array $references)
     {
         $this->config = $config;
         $this->timestamp = new \DateTime();
 
-
+        $this->setReferences($references);
 
         $this->setApplicationRequest(new ApplicationRequest());
         $this->setRequestHeader(new RequestHeader());
-
-
     }
 
     /**
@@ -58,7 +60,7 @@ class DownloadFileRequest implements RequestInterface
     }
 
     /**
-     * @param RequestHeader $RequestHeader
+     * @param RequestHeader $rh
      */
     public function setRequestHeader(RequestHeader $rh)
     {
@@ -82,23 +84,62 @@ class DownloadFileRequest implements RequestInterface
     }
 
     /**
-     * @param base64Binary $ApplicationRequest
+     * @param ApplicationRequest $ar
+     * @internal param $ApplicationRequest
      */
-    public function setApplicationRequest(ApplicationRequest $ap)
+    public function setApplicationRequest(ApplicationRequest $ar)
     {
-        $ap->command = 'downloadFile';
-        $ap->file_type = 'TITO';
-        $ap->status = 'All';
-        $ap->file_reference = "11111111A12006030319503000000010";
+        $ar->command = 'downloadFile';
 
-        $ap->target_id = '11111111A1';
-        $ap->timestamp = $this->timestamp;
-        $ap->environment = $this->config->environment;
-        $ap->software_id = 'Ruby';
-        $ap->customer_id = $this->config->customer_id;
+        $ar->customer_id = $this->config->customer_id;
+        $ar->environment = $this->config->environment;
+        $ar->software_id = $this->config->software_id;
+        $ar->timestamp = $this->timestamp;
 
+        $ar->file_type = $this->type;
+        $ar->status = $this->status;
+        $ar->file_references = $this->references;
+        $ar->target_id = '11111111A1';
 
-        $this->ApplicationRequest=  new SignedApplicationRequest($ap, $this->config);
+        $this->ApplicationRequest=  new SignedApplicationRequest($ar, $this->config);
+        $this->rawApplicationRequest = $ar;
+    }
+
+    /**
+     * @return ApplicationRequest
+     */
+    public function getRawApplicationRequest()
+    {
+        return $this->rawApplicationRequest;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType(string $type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus(string $status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @param array $references
+     * @throws \Exception
+     */
+    public function setReferences(array $references)
+    {
+        if(empty($references)){
+            throw new \Exception('you should add ref for at least one target file');
+        }
+
+        $this->references = $references;
     }
 
 

@@ -17,7 +17,7 @@ class ApplicationRequest
     public $status;
     public $service_id;
     public $environment;
-    public $file_reference;
+    public $file_references;
     public $user_filename;
     public $target_id;
     public $execution_serial;

@@ -49,10 +49,6 @@ class GetUserInfoResponse implements ResultInterface
      */
     public function setApplicationResponse($ApplicationResponse)
     {
-        echo 12313;
-
-        exit(1);
-
         $this->ApplicationResponse = $ApplicationResponse;
     }
 

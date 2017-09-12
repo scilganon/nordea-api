@@ -25,6 +25,7 @@ class GetUserInfoRequest implements RequestInterface
 
     /** @var SignedApplicationRequest  */
     private $ApplicationRequest;
+    private $rawApplicationRequest;
 
     /**
      * GetUserInfoRequest constructor.
@@ -73,6 +74,7 @@ class GetUserInfoRequest implements RequestInterface
         return base64_encode($this->ApplicationRequest->toDocument()->saveXML());
     }
 
+
     /**
      * @param ApplicationRequest $ap
      */
@@ -85,7 +87,16 @@ class GetUserInfoRequest implements RequestInterface
         $ap->software_id = $this->config->software_id;
         $ap->timestamp = $this->timestamp;
 
+        $this->rawApplicationRequest = $ap;
         $this->ApplicationRequest = new SignedApplicationRequest($ap, $this->config);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRawApplicationRequest()
+    {
+        return $this->rawApplicationRequest;
     }
 }
 

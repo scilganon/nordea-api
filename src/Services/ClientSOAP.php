@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Profit\Nordea\API;
+namespace Profit\Nordea\API\Services;
 
 
 use Phpro\SoapClient\Client;
