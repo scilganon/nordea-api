@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "79144ca77c86f1309998b89c28109e24",
+    "content-hash": "a90857cae14e91747088422e1bb69f8b",
     "packages": [
         {
             "name": "doctrine/collections",
@@ -1590,6 +1590,38 @@
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
             "time": "2017-07-26T06:42:48+00:00"
+        },
+        {
+            "name": "verdant/xml2array",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rentpost/xml2array.git",
+                "reference": "8afd54fbb08c02c32884b5da41ac75d42a14f048"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rentpost/xml2array/zipball/8afd54fbb08c02c32884b5da41ac75d42a14f048",
+                "reference": "8afd54fbb08c02c32884b5da41ac75d42a14f048",
+                "shasum": ""
+            },
+            "require": {
+                "lib-libxml": "*",
+                "lib-pcre": "*",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Verdant\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "Convert from XML to array, array to XML, based on libs from lalit.org",
+            "time": "2015-04-23 03:08:15"
         },
         {
             "name": "weew/helpers-string",
@@ -3240,9 +3272,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "fguillot/json-rpc": 0
+        "fguillot/json-rpc": 0,
+        "verdant/xml2array": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

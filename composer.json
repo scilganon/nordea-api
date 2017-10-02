@@ -6,6 +6,7 @@
             "email": "scilganon@bigmir.net"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "robrichards/wse-php": "^2.0",
         "robrichards/xmlseclibs": "*",
@@ -15,7 +16,8 @@
         "guzzlehttp/guzzle": "^6.2",
         "http-interop/http-factory-guzzle": "^0.1.0",
         "fguillot/json-rpc": "@stable",
-        "funct/funct": "^1.4"
+        "funct/funct": "^1.4",
+        "verdant/xml2array": "dev-master"
     },
     "autoload": {
         "psr-4": {

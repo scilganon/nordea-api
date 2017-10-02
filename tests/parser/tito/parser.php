@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../bootstrap.php';
+require __DIR__ . '/../../bootstrap.php';
 
 $parser = new Profit\Nordea\API\Parser\TITOParser();
 
