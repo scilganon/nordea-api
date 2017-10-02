@@ -26,6 +26,7 @@ class DownloadFileListRequest implements RequestInterface
 
     /** @var SignedApplicationRequest  */
     private $ApplicationRequest;
+    /** @var  ApplicationRequest */
     private $rawApplicationRequest;
     /**
      * @var
@@ -103,9 +104,6 @@ class DownloadFileListRequest implements RequestInterface
         $this->ApplicationRequest = new SignedApplicationRequest($ap, $this->config);
     }
 
-    /**
-     * @return mixed
-     */
     public function getRawApplicationRequest()
     {
         return $this->rawApplicationRequest;
