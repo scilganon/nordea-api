@@ -1,15 +1,32 @@
+require 'dotenv'
+Dotenv.load
 
 require 'rubygems'
 require 'bundler/setup'
 
-require 'jimson'
+require 'oj'
 require 'active_support'
 require "nordea/file_transfer"
-require "json"
+require 'jimson'
+
 
 
 # puts response.application_response
 # => Nordea::FileTransfer::ApplicationResponse
+
+
+class OJAdapter
+  def encode(object, options = {})
+      ::Oj.dump(object, options)
+  end
+
+  def decode(string, options = {})
+    ::Oj.load(string, options)
+  end
+end
+
+# MultiJson.engine = OJAdapter.new
+
 
 class Server
   extend Jimson::Handler
@@ -31,7 +48,7 @@ class Server
   end
 
   def run(method, iconfig, iheader, irequest)
-    key_path = '/home/Projects/ruby-test/cert/WSNDEA1234.pem'
+    key_path = ENV['KEY_PATH']
 
     Nordea::FileTransfer.configure do |config|
       iconfig.each { |key, value|
@@ -59,12 +76,17 @@ class Server
 
       puts response.application_response
 
-      response
+      Oj.dump(response)
     rescue Nordea::FileTransfer::Error => e
       e
     end
   end
 end
 
-server = Jimson::Server.new(Server.new)
+
+
+server = Jimson::Server.new(Server.new, {
+    :host => ENV['HOST'],
+    :port => ENV['PORT']
+})
 server.start # serve with webrick on http://0.0.0.0:8999/

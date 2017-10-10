@@ -27,7 +27,7 @@ class ClientRPCProxy implements ClientInterface
     /**
      * ClientRPC constructor.
      */
-    public function __construct(Config $config, string $clientUrl = 'http://0.0.0.0:8999')
+    public function __construct(Config $config, string $clientUrl = 'http://0.0.0.0:8099')
     {
         $this->config = $config;
         $this->client = new Client($clientUrl);
@@ -56,7 +56,7 @@ class ClientRPCProxy implements ClientInterface
             'request' => $request->getRawApplicationRequest(),
         ]);
 
-        return $this->toResponse(DownloadFileResponse::class, $rawResponse);
+        return $this->toResponse(DownloadFileResponse::class, json_decode($rawResponse, true));
     }
 
     /**
