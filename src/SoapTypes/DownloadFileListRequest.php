@@ -32,7 +32,7 @@ class DownloadFileListRequest implements RequestInterface
      * @var
      */
     private $target_id;
-    private $type = 'TITO';
+    private $type = 'NDCAMT54L';
     private $status = 'ALL';
 
     /**

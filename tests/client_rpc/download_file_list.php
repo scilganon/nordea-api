@@ -10,6 +10,6 @@ require __DIR__ . '/../bootstrap.php';
 
 $client = new \Profit\Nordea\API\Services\ClientRPCProxy($config);
 
-$req = new \Profit\Nordea\API\SoapTypes\DownloadFileListRequest($config, '11111111A1');
+$req = new \Profit\Nordea\API\SoapTypes\DownloadFileListRequest($config, '0006454783');
 
 print_r($client->downloadFileList($req));

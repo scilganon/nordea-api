@@ -31,7 +31,7 @@ class DownloadFileRequest implements RequestInterface
     private $timestamp;
     private $rawApplicationRequest;
 
-    private $type = 'TITO';
+    private $type = 'NDCAMT54L';
     private $status = 'ALL';
     private $references = [];
     private $target_id;
