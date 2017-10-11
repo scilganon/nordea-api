@@ -56,7 +56,7 @@ class ClientRPCProxy implements ClientInterface
             'request' => $request->getRawApplicationRequest(),
         ]);
 
-        return $this->toResponse(DownloadFileResponse::class, json_decode($rawResponse, true));
+        return $this->toResponse(DownloadFileResponse::class, $rawResponse);
     }
 
     /**
@@ -97,6 +97,10 @@ class ClientRPCProxy implements ClientInterface
      */
     protected function toResponse(string $targetClass, $rawResponse)
     {
+        if($decoded = json_decode($rawResponse, true)){
+            $rawResponse = $decoded;
+        }
+
         if(is_string($rawResponse)){
             $code = [];
             preg_match('/.*\(#(\d+)\).*/', $rawResponse, $code);
